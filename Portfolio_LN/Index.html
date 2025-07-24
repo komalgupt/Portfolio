@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Komal Gupta | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    h2 {
+      text-align: center;
+    }
+
+    .home-content {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .home-content img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .social-icons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .social-icons a {
+      color: #333;
+      font-size: 20px;
+      transition: 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #3498db;
+    }
+
+    .about-img {
+      display: none; /* Hide About section image */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="nav-container">
+      <h1 class="logo">Komal Gupta</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certificates">Certificates</a></li> 
+
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="home-section">
+    <div class="home-content">
+      <img src="Image/profile.jpg" alt="Komal Gupta">
+      <h2>Hello, I'm</h2>
+      <h1>Komal Gupta</h1>
+      <h3>A Tech Enthusiast</h3>
+      <p>Exploring the world of Data and Machine Learning.</p>
+      <div class="social-icons">
+        <a href="mailto:komalgupta309128@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/komal-gupta-031bb22b0/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/komalgupt" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-container">
+      <div class="about-text">
+        <p>
+          A data-driven and detail-oriented professional with a strong academic foundation in mathematics and a completed M.Sc. in Data Science and Big Data Analytics. I am passionate about applying advanced analytical techniques, automation, and intelligent systems to solve real-world challenges and drive business performance. I aim to contribute to dynamic organizations by leveraging my skills in data analysis, machine learning, process automation, visualization, and backend development. I am committed to continuous growth, innovation, and delivering value through smart, efficient, and scalable solutions.
+        </p>
+        <a class="cv-button" href="https://drive.google.com/file/d/1rgfXzeQM0aIzAFd1TjJ4D40GCBZZNE_t/view?usp=sharing" target="_blank">Download My CV</a>
+      </div>
+    </div>
+  </section>
+
+ <!-- Skills Section -->
+<section id="skills">
+  <h2>My Skills</h2>
+  <div class="skills-wrapper">
+
+    <div class="skill-group">
+      <h3>Programming</h3>
+      <p>Python, SQL</p>
+    </div>
+
+    <div class="skill-group">
+      <h3>Machine Learning</h3>
+      <p>Regression, Classification, Model Evaluation, Scikit-learn</p>
+    </div>
+
+    <div class="skill-group">
+      <h3>Deep Learning</h3>
+      <p>CNN, VGG16, TensorFlow, Keras, ResNeXt, LSTM</p>
+    </div>
+
+    <div class="skill-group">
+      <h3>Data Preprocessing</h3>
+      <p>Missing Value Imputation, Encoding, Feature Scaling</p>
+    </div>
+
+    <div class="skill-group">
+      <h3>Visualization Tools</h3>
+      <p>Tableau, Power BI, Matplotlib, Seaborn</p>
+    </div>
+
+    <div class="skill-group">
+      <h3>Data Handling</h3>
+      <p>Pandas, NumPy, PostgreSQL</p>
+    </div>
+
+    <div class="skill-group">
+      <h3>Web Analytics</h3>
+      <p>Google Analytics, SimilarWeb</p>
+    </div>
+
+    <div class="skill-group">
+      <h3>Tools</h3>
+      <p>Jupyter, Google Colab, GitHub, Flask</p>
+    </div>
+
+    <div class="skill-group">
+      <h3>Soft Skills</h3>
+      <p>Problem-solving, Communication, Team Collaboration</p>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project-card">
+      <h3>Ripe-Sense: Mango Quality Grading</h3>
+      <p>Built a deep learning model using VGG16 to classify mango ripeness and deployed it with Flask.</p>
+      <a href="https://github.com/komalgupt/RIPE-SENSE-MANGO-QUALITY-GRADING-WITH-IMAGE-ANALYSIS-AND-DEEP-LEARNING" target="_blank">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <h3>AI-powered SQL Query Generator</h3>
+      <p>Built an AI assistant that converts natural language queries into SQL commands.</p>
+      <a href="https://github.com/komalgupt/AI-Agent-SQL-Generator-" target="_blank">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Deepfake Detection with ResNeXt & LSTM</h3>
+      <p>Developed a real vs. fake video classifier using ResNeXt and LSTM, deployed via FastAPI.</p>
+      <a href="https://github.com/komalgupt/DeepFake_Detection_For_Media_Verification_Using_ResNext_LSTM" target="_blank">View Project</a>
+    </div>
+
+  </section>
+
+  <!-- Certificates Section -->
+<section id="certificates">
+  <h2>Certificates</h2>
+  <div class="certificates-wrapper">
+
+    <div class="certificate-card">
+      <h3>Practical Approach to Data Mining and Analytics</h3>
+      <p>Issued by TCS</p>
+      <a href="https://drive.google.com/file/d/1ZTyW_U8JwlsxSb5vRkGejYtF7042j7eF/view?usp=sharing" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="certificate-card">
+      <h3>Machine Learning</h3>
+      <p>Issued by L&T Edutech</p>
+      <a href="https://drive.google.com/file/d/1ZJDmVF3SOezqt6e3blyQmh7KSaVGQyzN/view?usp=sharing" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="certificate-card">
+      <h3>Getting Started with Enterprise-Grade AI</h3>
+      <p>Issued by IBM</p>
+      <a href="https://drive.google.com/file/d/1Z1gIXnGhUOV9BIHqrDUpx8UB3xt_XoD4/view?usp=sharing" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="certificate-card">
+      <h3>Enterprise Data Science in Practice</h3>
+      <p>Issued by IBM</p>
+      <a href="https://drive.google.com/file/d/1cWT_NJw5kWzHFUrxizEP1JtZSHj-opXl/view?usp=sharing" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="certificate-card">
+      <h3>Deep Learning</h3>
+      <p>Issued by L&T Edutech</p>
+      <a href="https://drive.google.com/file/d/1G7O_Di86cTTLnMdUtmARSLZa2FYF075N/view?usp=sharing" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="certificate-card">
+      <h3>Google Cloud Skills Boost Badges</h3>
+      <p>Issued by Google Cloud</p>
+      <a href="https://www.cloudskillsboost.google/profile/badges" target="_blank">View Certificate</a>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-icons" style="text-align: center; margin-top: 20px;">
+      <p><i class="fas fa-phone-alt"></i> +91 9967824951</p>
+      <p><i class="fas fa-envelope"></i> komalgupta309128@gmail.com</p>
+      <p><i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra, India</p>
+    </div>
+  </section>
+
+  <footer>
+    <p style="text-align: center;">&copy; 2025 Komal Gupta. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
