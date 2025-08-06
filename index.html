@@ -9,144 +9,187 @@
   <style>
     h2 {
       text-align: center;
-    }
-
-    .home-content {
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    .home-content img {
-      width: 180px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 50%;
+      font-size: 32px;
       margin-bottom: 20px;
     }
-
-    .social-icons {
-      margin-top: 20px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
+    .active {
+      color: #ff00ae !important;
+      font-weight: bold;
     }
-
-    .social-icons a {
-      color: #333;
-      font-size: 20px;
-      transition: 0.3s ease;
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-out;
     }
-
-    .social-icons a:hover {
-      color: #3498db;
+    .appear {
+      opacity: 1;
+      transform: translateY(0);
     }
-
-    .about-img {
-      display: none; /* Hide About section image */
+    .menu-toggle {
+      display: none;
+      cursor: pointer;
+    }
+    .menu-toggle i {
+      font-size: 24px;
+    }
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <header>
-    <div class="nav-container">
-      <h1 class="logo">Komal Gupta</h1>
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#certificates">Certificates</a></li> 
-
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-       <!-- ✅ Hamburger Icon -->
+<!-- Navbar -->
+<header>
+  <div class="nav-container">
+    <h1 class="logo">Komal Gupta</h1>
+    <nav>
+      <ul id="navbar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
       <div class="menu-toggle" onclick="toggleMenu()">
         <i class="fas fa-bars"></i>
       </div>
-    </div>
-  </header>
+    </nav>
+  </div>
+</header>
 
-  <!-- Home Section -->
-  <section id="home" class="home-section">
-    <div class="home-content">
-      <img src="Image/profile.jpg" alt="Komal Gupta">
-      <h2>Hello, I'm</h2>
-      <h1>Komal M.P. Gupta</h1>
-      <h3>A Tech Enthusiast</h3>
-      <p>Exploring the world of Data and Machine Learning.</p>
-      <div class="social-icons">
-        <a href="mailto:komalgupta309128@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a>
-        <a href="https://www.linkedin.com/in/komal-gupta-031bb22b0/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/komalgupt" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-      </div>
+<!-- Home Section -->
+<section id="home" class="home-section fade-in">
+  <div class="home-content">
+    <img src="Image/profile.jpg" alt="Komal Gupta">
+    <h2>Hi There! <span>👋</span></h2>
+    <h1 id="typing"></h1>
+    <h3>A Tech Enthusiast 💡</h3>
+    <p>Exploring the world of Data and Machine Learning 🤖📊</p>
+    <div class="social-icons">
+      <a href="mailto:komalgupta309128@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/komal-gupta-031bb22b0/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/komalgupt" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
     </div>
-  </section>
-
-  <!-- About Section -->
+  </div>
+</section>
+ <!-- About Section -->
   <section id="about">
-    <h2>About Me</h2>
-    <div class="about-container">
-      <div class="about-text">
-        <p>
-          A data-driven and detail-oriented professional with a strong academic foundation in mathematics and a completed M.Sc. in Data Science and Big Data Analytics. I am passionate about applying advanced analytical techniques, automation, and intelligent systems to solve real-world challenges and drive business performance. I aim to contribute to dynamic organizations by leveraging my skills in data analysis, machine learning, process automation, visualization, and backend development. I am committed to continuous growth, innovation, and delivering value through smart, efficient, and scalable solutions.
-        </p>
-        <a class="cv-button" href="https://drive.google.com/file/d/1rgfXzeQM0aIzAFd1TjJ4D40GCBZZNE_t/view?usp=sharing" target="_blank">Download My CV</a>
-      </div>
+  <h2 class="section-title">👩‍💻 About Me</h2>
+  <p class="section-subtitle">A data-driven and detail-oriented professional</p>
+
+  <div class="about-card">
+    <p>
+      A data-driven and detail-oriented professional with a strong academic foundation in mathematics and a completed
+      <strong class="highlight">M.Sc. in Data Science and Big Data Analytics</strong>. I am passionate about applying advanced analytical techniques, automation, and intelligent systems to solve real-world challenges and drive business performance.
+    </p>
+    <p>
+      I aim to contribute to dynamic organizations by leveraging my skills in 
+      data analysis, machine learning, process automation, visualization, and backend development
+      I am committed to continuous growth, innovation, and delivering value through smart, efficient, and scalable solutions.
+    </p>
+
+    <a href="https://drive.google.com/file/d/1rgfXzeQM0aIzAFd1TjJ4D40GCBZZNE_t/view?usp=sharing" class="btn-download" download>
+      <i class="fas fa-download"></i> Download My CV
+    </a>
     </div>
   </section>
 
  <!-- Skills Section -->
 <section id="skills">
-  <h2>My Skills</h2>
-  <div class="skills-wrapper">
+  <h2 class="section-title">🧠 My Skills</h2>
+  <p class="section-subtitle">A comprehensive toolkit for data science, machine learning, and analytics</p>
 
-    <div class="skill-group">
-      <h3>Programming</h3>
-      <p>Python, SQL</p>
+  <div class="skills-grid">
+
+    <!-- Skill Card -->
+    <div class="modern-card">
+      <h3>💻 Programming</h3>
+      <div class="tags">
+        <span>Python</span>
+        <span>SQL</span>
+      </div>
     </div>
 
-    <div class="skill-group">
-      <h3>Machine Learning</h3>
-      <p>Regression, Classification, Model Evaluation, Scikit-learn</p>
+    <div class="modern-card">
+      <h3>🤖 Machine Learning</h3>
+      <div class="tags">
+        <span>Regression</span>
+        <span>Classification</span>
+        <span>Model Evaluation</span>
+        <span>Scikit-learn</span>
+      </div>
     </div>
 
-    <div class="skill-group">
-      <h3>Deep Learning</h3>
-      <p>CNN, VGG16, TensorFlow, Keras, ResNeXt, LSTM</p>
+    <div class="modern-card">
+      <h3>🧠 Deep Learning</h3>
+      <div class="tags">
+        <span>CNN</span>
+        <span>VGG16</span>
+        <span>TensorFlow</span>
+        <span>Keras</span>
+        <span>ResNeXt</span>
+        <span>LSTM</span>
+      </div>
     </div>
 
-    <div class="skill-group">
-      <h3>Data Preprocessing</h3>
-      <p>Missing Value Imputation, Encoding, Feature Scaling</p>
+    <div class="modern-card">
+      <h3>⚙️ Data Preprocessing</h3>
+      <div class="tags">
+        <span>Missing Value Imputation</span>
+        <span>Encoding</span>
+        <span>Feature Scaling</span>
+      </div>
     </div>
 
-    <div class="skill-group">
-      <h3>Visualization Tools</h3>
-      <p>Tableau, Power BI, Matplotlib, Seaborn</p>
+    <div class="modern-card">
+      <h3>📊 Visualization Tools</h3>
+      <div class="tags">
+        <span>Tableau</span>
+        <span>Power BI</span>
+        <span>Matplotlib</span>
+        <span>Seaborn</span>
+      </div>
     </div>
 
-    <div class="skill-group">
-      <h3>Data Handling</h3>
-      <p>Pandas, NumPy, PostgreSQL</p>
+    <div class="modern-card">
+      <h3>🗃️ Data Handling</h3>
+      <div class="tags">
+        <span>Pandas</span>
+        <span>NumPy</span>
+        <span>PostgreSQL</span>
+      </div>
     </div>
 
-    <div class="skill-group">
-      <h3>Web Analytics</h3>
-      <p>Google Analytics, SimilarWeb</p>
+    <div class="modern-card">
+      <h3>📈 Web Analytics</h3>
+      <div class="tags">
+        <span>Google Analytics</span>
+        <span>SimilarWeb</span>
+      </div>
     </div>
 
-    <div class="skill-group">
-      <h3>Tools</h3>
-      <p>Jupyter, Google Colab, GitHub, Flask, VS Code</p>
+    <div class="modern-card">
+      <h3>🛠️ Tools</h3>
+      <div class="tags">
+        <span>Jupyter</span>
+        <span>Google Colab</span>
+        <span>GitHub</span>
+        <span>Flask</span>
+        <span>FastAPI</span>
+      </div>
     </div>
 
-    <div class="skill-group">
-      <h3>Soft Skills</h3>
-      <p>Problem-solving, Communication, Team Collaboration, Leadership</p>
+    <div class="modern-card">
+      <h3>🎯 Soft Skills</h3>
+      <div class="tags">
+        <span>Problem-solving</span>
+        <span>Communication</span>
+        <span>Teamwork</span>
+      </div>
     </div>
 
   </div>
@@ -154,84 +197,170 @@
 
   <!-- Projects Section -->
   <section id="projects">
-    <h2>Projects</h2>
-
-    <div class="project-card">
-      <h3>Ripe-Sense: Mango Quality Grading</h3>
-      <p>Built a deep learning model using VGG16 to classify mango ripeness and deployed it with Flask.</p>
-      <a href="https://github.com/komalgupt/RIPE-SENSE-MANGO-QUALITY-GRADING-WITH-IMAGE-ANALYSIS-AND-DEEP-LEARNING" target="_blank">View Project</a>
+    <h2 class = "section-title">💼 Featured Projects</h2>
+  <div class="modern-card">
+  <div class="card-top"></div>
+  <h3>Ripe-Sense: Mango Quality Grading</h3>
+  <p>Built a deep learning model using VGG16 to classify mango ripeness and deployed it with Flask.</p>
+  <div class="tags">
+    <span>Deep Learning</span>
+    <span>VGG16</span>
+    <span>Flask</span>
+  </div>
+  <div class="card-buttons">
+    <a href="https://github.com/komalgupt/RIPE-SENSE-MANGO-QUALITY-GRADING-WITH-IMAGE-ANALYSIS-AND-DEEP-LEARNING" target="_blank" class="code-btn">
+      <i class="fab fa-github"></i> Code
+    </a>
+    <a href="https://github.com/komalgupt/RIPE-SENSE-MANGO-QUALITY-GRADING-WITH-IMAGE-ANALYSIS-AND-DEEP-LEARNING" target="_blank" class="view-btn">
+      <i class="fas fa-external-link-alt"></i> View
+    </a>
+    </div>
     </div>
 
-    <div class="project-card">
-      <h3>AI-powered SQL Query Generator</h3>
-      <p>Built an AI assistant that converts natural language queries into SQL commands.</p>
-      <a href="https://github.com/komalgupt/AI-Agent-SQL-Generator-" target="_blank">View Project</a>
-    </div>
+<div class="modern-card">
+  <div class="card-top"></div>
+  <h3>AI Agent: SQL Generator</h3>
+  <p>An intelligent AI agent that converts natural language into SQL queries using Gemini_API. integrated with a future-ready Python backend and web UI.</p>
+  <div class="tags">
+    <span>Gemini_API</span>
+    <span>Database</span>
+    <span>Flask</span>
+    <span>HTML</span>
+    <span>CSS</span>
+  </div>
+  <div class="card-buttons">
+    <a href="https://github.com/komalgupt/AI-Agent-SQL-Generator-" target="_blank" class="code-btn">
+      <i class="fab fa-github"></i> Code
+    </a>
+    <a href="https://github.com/komalgupt/AI-Agent-SQL-Generator-" target="_blank" class="view-btn">
+      <i class="fas fa-external-link-alt"></i> View
+    </a>
+  </div>
+</div>
 
-    <div class="project-card">
-      <h3>Deepfake Detection with ResNeXt & LSTM</h3>
-      <p>Developed a real vs. fake video classifier using ResNeXt and LSTM, deployed via FastAPI.</p>
-      <a href="https://github.com/komalgupt/DeepFake_Detection_For_Media_Verification_Using_ResNext_LSTM" target="_blank">View Project</a>
-    </div>
 
-    <div class="project-card">
-      <h3>Blinkit Data Analysis on Power BI</h3>
-      <p>Analyzed Blinkit's sales, items, and customer behavior using interactive Power BI dashboards.</p>
-      <a href="https://github.com/komalgupt/Blinkit_On_PBI" target="_blank">View Project</a>
-    </div>
+  <!-- Modern Card - Deepfake Detection -->
+<div class="modern-card">
+  <div class="card-top"></div>
+  <h3>Deepfake Detection with ResNeXt & LSTM</h3>
+  <p>Developed a real vs. fake video classifier using ResNeXt and LSTM, deployed via FastAPI.</p>
+  <div class="tags">
+    <span>ResNeXt</span>
+    <span>LSTM</span>
+    <span>FastAPI</span>
+    <span>Deep Learning</span>
+  </div>
+  <div class="card-buttons">
+    <a href="https://github.com/komalgupt/DeepFake_Detection_For_Media_Verification_Using_ResNext_LSTM" target="_blank" class="code-btn">
+      <i class="fab fa-github"></i> Code
+    </a>
+    <a href="https://github.com/komalgupt/DeepFake_Detection_For_Media_Verification_Using_ResNext_LSTM" target="_blank" class="view-btn">
+      <i class="fas fa-external-link-alt"></i> View
+    </a>
+  </div>
+</div>
 
-    <div class="project-card">
-      <h3>Amazon's Data Analysis on Power BI</h3>
-      <p>Built a dashboard in Power BI to visualize product performance, customer segmentation, and profit analysis.</p>
-      <a href="https://github.com/komalgupt/PowerBI_Dashboard_2" target="_blank">View Project</a>
-    </div>
+<!-- Modern Card - Blinkit Power BI -->
+<div class="modern-card">
+  <div class="card-top"></div>
+  <h3>Blinkit Data Analysis on Power BI</h3>
+  <p>Analyzed Blinkit's sales, items, and customer behavior using interactive Power BI dashboards.</p>
+  <div class="tags">
+    <span>Power BI</span>
+    <span>Data Analysis</span>
+    <span>Visualization</span>
+  </div>
+  <div class="card-buttons">
+    <a href="https://github.com/komalgupt/Blinkit_On_PBI" target="_blank" class="code-btn">
+      <i class="fab fa-github"></i> Code
+    </a>
+    <a href="https://github.com/komalgupt/Blinkit_On_PBI" target="_blank" class="view-btn">
+      <i class="fas fa-external-link-alt"></i> View
+    </a>
+  </div>
+</div>
 
-    <div class="project-card">
-      <h3>Power BI Dashboard - Retail Analytics</h3>
-      <p>Designed a Power BI dashboard to uncover sales trends, performance metrics, and category-wise insights.</p>
-      <a href="https://github.com/komalgupt/PowerBI_Dashboard_1" target="_blank">View Project</a>
-    </div>
+<!-- Modern Card - Amazon Power BI -->
+<div class="modern-card">
+  <div class="card-top"></div>
+  <h3>Amazon's Data Analysis on Power BI</h3>
+  <p>Built a dashboard in Power BI to visualize product performance, customer segmentation, and profit analysis.</p>
+  <div class="tags">
+    <span>Power BI</span>
+    <span>Customer Segmentation</span>
+    <span>Dashboard</span>
+  </div>
+  <div class="card-buttons">
+    <a href="https://github.com/komalgupt/PowerBI_Dashboard_2" target="_blank" class="code-btn">
+      <i class="fab fa-github"></i> Code
+    </a>
+    <a href="https://github.com/komalgupt/PowerBI_Dashboard_2" target="_blank" class="view-btn">
+      <i class="fas fa-external-link-alt"></i> View
+    </a>
+  </div>
+</div>
+
+<!-- Modern Card - Retail Analytics -->
+<div class="modern-card">
+  <div class="card-top"></div>
+  <h3>Power BI Dashboard - Retail Analytics</h3>
+  <p>Designed a Power BI dashboard to uncover sales trends, performance metrics, and category-wise insights.</p>
+  <div class="tags">
+    <span>Power BI</span>
+    <span>Retail</span>
+    <span>Sales Insights</span>
+  </div>
+  <div class="card-buttons">
+    <a href="https://github.com/komalgupt/PowerBI_Dashboard_1" target="_blank" class="code-btn">
+      <i class="fab fa-github"></i> Code
+    </a>
+    <a href="https://github.com/komalgupt/PowerBI_Dashboard_1" target="_blank" class="view-btn">
+      <i class="fas fa-external-link-alt"></i> View
+    </a>
+  </div>
+</div>
+
 
 
   </section>
 
   <!-- Certificates Section -->
 <section id="certificates">
-  <h2>Certificates</h2>
+  <h2>📜 Certificates</h2>
   <div class="certificates-wrapper">
 
     <div class="certificate-card">
-      <h3>Practical Approach to Data Mining and Analytics</h3>
+      <h3>🏅Practical Approach to Data Mining and Analytics</h3>
       <p>Issued by TCS</p>
       <a href="https://drive.google.com/file/d/1ZTyW_U8JwlsxSb5vRkGejYtF7042j7eF/view?usp=sharing" target="_blank">View Certificate</a>
     </div>
 
     <div class="certificate-card">
-      <h3>Machine Learning</h3>
+      <h3>🏅Machine Learning</h3>
       <p>Issued by L&T Edutech</p>
       <a href="https://drive.google.com/file/d/1ZJDmVF3SOezqt6e3blyQmh7KSaVGQyzN/view?usp=sharing" target="_blank">View Certificate</a>
     </div>
 
     <div class="certificate-card">
-      <h3>Getting Started with Enterprise-Grade AI</h3>
+      <h3>📛 Getting Started with Enterprise-Grade AI</h3>
       <p>Issued by IBM</p>
       <a href="https://drive.google.com/file/d/1Z1gIXnGhUOV9BIHqrDUpx8UB3xt_XoD4/view?usp=sharing" target="_blank">View Certificate</a>
     </div>
 
     <div class="certificate-card">
-      <h3>Enterprise Data Science in Practice</h3>
+      <h3>📛 Enterprise Data Science in Practice</h3>
       <p>Issued by IBM</p>
       <a href="https://drive.google.com/file/d/1cWT_NJw5kWzHFUrxizEP1JtZSHj-opXl/view?usp=sharing" target="_blank">View Certificate</a>
     </div>
 
     <div class="certificate-card">
-      <h3>Deep Learning</h3>
+      <h3>🏅 Deep Learning</h3>
       <p>Issued by L&T Edutech</p>
       <a href="https://drive.google.com/file/d/1G7O_Di86cTTLnMdUtmARSLZa2FYF075N/view?usp=sharing" target="_blank">View Certificate</a>
     </div>
 
     <div class="certificate-card">
-      <h3>Google Cloud Skills Boost Badges</h3>
+      <h3>📛 Google Cloud Skills Boost Badges</h3>
       <p>Issued by Google Cloud</p>
       <a href="https://www.cloudskillsboost.google/profile/badges" target="_blank">View Certificate</a>
     </div>
@@ -243,7 +372,7 @@
 
   <!-- Contact Section -->
   <section id="contact">
-    <h2>Contact</h2>
+    <h2>📞 Contact</h2>
     <div class="contact-icons" style="text-align: center; margin-top: 20px;">
       <p><i class="fas fa-phone-alt"></i> +91 9967824951</p>
       <p><i class="fas fa-envelope"></i> komalgupta309128@gmail.com</p>
@@ -251,17 +380,62 @@
     </div>
   </section>
 
-  <footer>
-    <p style="text-align: center;">&copy; 2025 Komal Gupta.</p>
-  </footer>
+<!-- Add other sections here, unchanged -->
+<!-- About, Skills, Projects, Certificates, Contact remain as in your original HTML -->
 
-   <!-- ✅ JS for Hamburger Menu -->
-  <script>
-    function toggleMenu() {
-      document.querySelector("nav ul").classList.toggle("show");
+<!-- Footer -->
+<footer>
+  <p style="text-align: center;">&copy; 2025 Komal Gupta.</p>
+</footer>
+
+<!-- JavaScript for Interactivity -->
+<script>
+const typing = document.getElementById("typing");
+const text = "Komal M.P. Gupta";
+let index = 0;
+function type() {
+  typing.innerText = text.slice(0, index++);
+  if (index <= text.length) setTimeout(type, 100);
+}
+type();
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav ul li a");
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - 80;
+    if (pageYOffset >= sectionTop) {
+      current = section.getAttribute("id");
     }
-  </script>
+  });
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === `#${current}`) {
+      link.classList.add("active");
+    }
+  });
+});
 
+function toggleMenu() {
+  document.querySelector("nav ul").classList.toggle("show");
+}
+
+const faders = document.querySelectorAll(".fade-in");
+const appearOptions = {
+  threshold: 0.3
+};
+const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add("appear");
+    observer.unobserve(entry.target);
+  });
+}, appearOptions);
+
+faders.forEach(fader => {
+  appearOnScroll.observe(fader);
+});
+</script>
 </body>
 </html>
-
